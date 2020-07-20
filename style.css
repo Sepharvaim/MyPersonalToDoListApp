@@ -18,7 +18,7 @@ body {
   height: 100vh;
   margin: 0 auto;
   margin-top: 1px;
-  background-image: url(board.jpg);
+  /* background-image: url(board.jpg); */
   background-position: center;
   padding: 5px 0 0 0;
   border-radius: 0px;
