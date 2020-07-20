@@ -7,6 +7,7 @@
 }
 body { 
   background-color: grey;
+  overflow: hidden;
 }
 .container {
   width: 375px;
@@ -17,19 +18,32 @@ body {
   background-image: url(board.jpg);
   background-position: center;
   padding: 5px 0 0 0;
-  border-radius: 20px;
-  /* border: 1px solid #000000; */
+  border-radius: 0px;
   z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 120px;
 }
 
 /* la parte visibile dell'app  */
 .seeing { 
-  flex-grow: 11;
+  -webkit-box-flex: 11; 
+      -ms-flex-positive: 11; 
+          flex-grow: 11;
+  overflow: scroll;
+  padding-bottom: 60px;
 }
-
+ul.listOfTasks { 
+  /* overflow: scroll; */
+}
 /* la parte invisibile dell'app ovvero le liste che vengono aggiunte insieme ai tasti  */
 .adding {
   width: 375px;
@@ -105,27 +119,36 @@ button.remove:hover svg {
 
 
 ul.listOfTasks li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;  
   margin: 10px;
   list-style-type: none;
   background: rgba(255, 255, 255, 0.5);
   padding: 16px 10px 14px 10px;
   line-height: 16px;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border-radius: 15px;
   box-shadow: inset 5px 5px 5px rgb(238, 232, 199);
   
 }
 
 ul.listOfTasks li p {
-  flex: 5 1;
+  -webkit-box-flex: 5;
+      -ms-flex: 5 1;
+          flex: 5 1;
   font-size: 18px;
 }
 
 /* bottone contentente secchio */
 ul.listOfTasks li .remove {
   background: none;
-  flex: 1 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
   outline: none;
 }
 
@@ -133,7 +156,9 @@ ul.listOfTasks li .remove {
 ul.listOfTasks li .complete {
   border-left: 1px solid rgb(170, 199, 170);
   background: none;
-  flex: 1 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
   outline: none;
 }
 /* frase che va via una volta aggiunto un elemento  */
