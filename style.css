@@ -3,7 +3,9 @@
   border: 0;
   padding: 0;
   margin: 0;
-
+}
+html {
+  overflow: hidden;
 }
 body { 
   background-color: grey;
