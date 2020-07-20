@@ -3,7 +3,6 @@
   border: 0;
   padding: 0;
   margin: 0;
-
 }
 html {
   overflow: hidden;
@@ -36,9 +35,7 @@ body {
   overflow: auto;
   padding-bottom: 60px;
 }
-ul.listOfTasks { 
-  /* overflow: scroll; */
-}
+
 /* la parte invisibile dell'app ovvero le liste che vengono aggiunte insieme ai tasti  */
 .adding {
   width: 375px;
