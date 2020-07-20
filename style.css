@@ -38,7 +38,7 @@ body {
   -webkit-box-flex: 11; 
       -ms-flex-positive: 11; 
           flex-grow: 11;
-  overflow: scroll;
+  overflow: auto;
   padding-bottom: 60px;
 }
 ul.listOfTasks { 
