@@ -5,9 +5,13 @@
   margin: 0;
 
 }
+html {
+  overflow: hidden;
+}
 body { 
   background-color: grey;
   overflow: hidden;
+  position: relative;
 }
 .container {
   width: 375px;
@@ -20,25 +24,16 @@ body {
   padding: 5px 0 0 0;
   border-radius: 0px;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   margin-bottom: 120px;
 }
 
 /* la parte visibile dell'app  */
 .seeing { 
-  -webkit-box-flex: 11; 
-      -ms-flex-positive: 11; 
-          flex-grow: 11;
-  overflow: scroll;
+  flex-grow: 11;
+  overflow: auto;
   padding-bottom: 60px;
 }
 ul.listOfTasks { 
@@ -119,36 +114,27 @@ button.remove:hover svg {
 
 
 ul.listOfTasks li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;  
   margin: 10px;
   list-style-type: none;
   background: rgba(255, 255, 255, 0.5);
   padding: 16px 10px 14px 10px;
   line-height: 16px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   border-radius: 15px;
   box-shadow: inset 5px 5px 5px rgb(238, 232, 199);
   
 }
 
 ul.listOfTasks li p {
-  -webkit-box-flex: 5;
-      -ms-flex: 5 1;
-          flex: 5 1;
+  flex: 5 1;
   font-size: 18px;
 }
 
 /* bottone contentente secchio */
 ul.listOfTasks li .remove {
   background: none;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1;
-          flex: 1 1;
+  flex: 1 1;
   outline: none;
 }
 
@@ -156,9 +142,7 @@ ul.listOfTasks li .remove {
 ul.listOfTasks li .complete {
   border-left: 1px solid rgb(170, 199, 170);
   background: none;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1;
-          flex: 1 1;
+  flex: 1 1;
   outline: none;
 }
 /* frase che va via una volta aggiunto un elemento  */
