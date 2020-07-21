@@ -1,4 +1,12 @@
 // DOM EXTRACTION    <<<<==================
+let laData = new Date();
+let hours = laData.getHours();
+let minutes = laData.getMinutes();
+let domData = document.querySelector('.data');
+
+let option = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+domData.innerText = laData.toLocaleDateString("it-US", option) + "    " + hours + ":" + minutes;
+
 
 let textArea = document.querySelector('.inputField');
 let buttonToAdd = document.querySelector('.buttonAdd');
