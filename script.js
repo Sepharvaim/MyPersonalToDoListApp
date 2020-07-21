@@ -194,7 +194,7 @@ function completeAnItem() {
 
 
 
+buttonToAdd.addEventListener('click', addToLocalStore);
 buttonToAdd.addEventListener('click', function() {
   addingToListItem(textArea.value);
 });
-buttonToAdd.addEventListener('click', addToLocalStore);
