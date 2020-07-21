@@ -20,7 +20,7 @@ body {
 .container {
   width: 375px;
   /* height: 667px; */
-  height: 100vh;
+/*   height: 100vh; */
   margin: 0 auto;
   margin-top: 1px;
   /* background-image: url(board.jpg); */
