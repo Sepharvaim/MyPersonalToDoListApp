@@ -20,7 +20,7 @@ body {
 .container {
   width: 375px;
   /* height: 667px; */
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0 auto;
   margin-top: 1px;
   /* background-image: url(board.jpg); */
@@ -150,7 +150,7 @@ ul.listOfTasks li .complete {
   outline: none;
 }
 /* frase che va via una volta aggiunto un elemento  */
-.data + ul:empty:after {
+ul#todo:empty:after {
   content: "Non hai ancora nulla sulla lista";
   font-size: 20px;
   width: 100%;
