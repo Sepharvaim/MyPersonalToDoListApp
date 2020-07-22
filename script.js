@@ -34,12 +34,14 @@ renderTheLocalStore();
 // $$$$$$$$$$$$$$$$$$$$    FUNCTION DEFINITION    $$$$$$$$$$$$$$$$$$
 
 function addToLocalStore() {
-  
+  console.log('ciao')
 // add to local data for localstorage
   data.todo.push(textArea.value);
   localStorage.setItem('todolist',JSON.stringify(data));
   
 }
+
+
 function renderTheLocalStore() {
   if (data.todo.length || data.completed.length) {
       for (let i = 0; i < data.todo.length; i++) {
@@ -206,3 +208,12 @@ buttonToAdd.addEventListener('click', addToLocalStore);
 buttonToAdd.addEventListener('click', function() {
   addingToListItem(textArea.value);
 });
+
+
+textArea.addEventListener('keydown', function(e) {
+  if (e.keyCode === 13) {
+    addToLocalStore();
+    addingToListItem(textArea.value);
+    
+  }
+})
