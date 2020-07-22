@@ -34,15 +34,15 @@ body {
 /* la parte visibile dell'app  */
 body .container .seeing { 
   flex-grow: 11;
-  overflow: scroll;
+  overflow: auto;
   padding-bottom: 60px;
 }
 
 /* la parte invisibile dell'app ovvero le liste che vengono aggiunte insieme ai tasti  */
 .adding {
   width: 375px;
-  background: rgb(116, 140, 135);
-  
+  background: rgb(3, 135, 156);
+  color: #fff;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 0px;
@@ -50,7 +50,6 @@ body .container .seeing {
   padding: 6px 5px 10px 5px;
   position: fixed;  
   bottom: 0px;
-  
   z-index: 5;
 }
 
@@ -58,6 +57,7 @@ body .container .seeing {
 .inputField {
   background: rgba(255,255,255,0.5);
   width: 100%;
+  color: #fff;
   font-size: 22px;
   height: 50px;
   padding: 0 60px 0 0;
@@ -105,7 +105,7 @@ ul.listOfTasks li button.complete:hover svg .noFill {
   fill: rgb(69, 199, 97);
 }
 ul.listOfTasks li button.complete:hover svg {
-  fill: #fff; 
+  fill: rgb(167, 129, 129); 
 }
 button.remove:hover svg {
   fill: red;
@@ -118,7 +118,7 @@ ul.listOfTasks li {
   display: flex;  
   margin: 10px;
   list-style-type: none;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 1);
   padding: 16px 10px 14px 10px;
   line-height: 16px;
   flex-direction: row;
@@ -165,8 +165,6 @@ ul#todo:empty:after {
   background: #a4b3ad;
   margin: 0 auto;
   z-index: 4;
-  
-  
 }
 
 #completed:empty:after {
